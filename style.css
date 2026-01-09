@@ -1,0 +1,588 @@
+/* =========================================
+   1. VARIABLES & RESET
+   ========================================= */
+:root {
+    --primary-text: #1a1a1a;
+    --secondary-text: #666666;
+    --accent-color: #ff2fa4; /* Miami Pink */
+    --accent-gradient: linear-gradient(135deg, #ff2fa4 0%, #bb277a 100%);
+    --bg-color: #f8f9fc;
+    --card-bg: #ffffff;
+    --glow-color: rgba(255, 47, 164, 0.15);
+    --font-main: 'Montserrat', sans-serif;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--primary-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* =========================================
+   2. BACKGROUND DECORATION
+   ========================================= */
+.glow-bg {
+    position: fixed;
+    top: -10%;
+    right: -10%;
+    width: 60vw;
+    height: 60vw;
+    background: radial-gradient(circle, var(--glow-color) 0%, rgba(255,255,255,0) 70%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* =========================================
+   3. HEADER & NAVIGATION
+   ========================================= */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1.2rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: -0.5px;
+}
+
+.dot {
+    color: var(--accent-color);
+    font-size: 2rem;
+    line-height: 0;
+}
+
+nav ul {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+nav a {
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: var(--transition);
+    color: var(--secondary-text);
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+.nav-btn {
+    padding: 0.6rem 1.5rem;
+    background: var(--primary-text);
+    color: #fff !important;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: transform 0.3s;
+}
+
+.nav-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* =========================================
+   4. HERO SECTION
+   ========================================= */
+.hero {
+    min-height: 100vh;
+    padding: 8rem 5% 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1400px;
+    gap: 20rem;
+}
+
+.hero-content {
+    flex: 0 1 550px;
+    max-width: 550px;
+    z-index: 2;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 47, 164, 0.08);
+    color: var(--accent-color);
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 47, 164, 0.2);
+}
+
+.hero h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1.5px;
+}
+
+.gradient-text {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--secondary-text);
+    margin-bottom: 2.5rem;
+    max-width: 480px;
+}
+
+.btn-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 1rem;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: var(--accent-gradient);
+    color: #fff;
+    box-shadow: 0 10px 25px rgba(255, 47, 164, 0.3);
+}
+
+.btn-text {
+    color: var(--primary-text);
+}
+
+/* =========================================
+   5. 3D CAROUSEL
+   ========================================= */
+.carousel-scene {
+    width: 200px;
+    height: 355px;
+    perspective: 1000px;
+    position: relative;
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: rotate 20s infinite linear;
+}
+
+.carousel:hover {
+    animation-play-state: paused; /* Pause rotation on hover */
+}
+
+.carousel-face {
+    position: absolute;
+    width: 200px;
+    height: 355px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 4px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-light);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border-radius: 16px;
+    text-decoration: none; /* Ensure no underline */
+    transition: background 0.3s, transform 0.3s;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.carousel-face video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none; /* Let clicks pass through to the face div */
+}
+
+.carousel-face:hover {
+    background: #fff;
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.carousel-face:nth-child(1) { transform: rotateY(0deg) translateZ(380px); }
+.carousel-face:nth-child(2) { transform: rotateY(30deg) translateZ(380px); }
+.carousel-face:nth-child(3) { transform: rotateY(60deg) translateZ(380px); }
+.carousel-face:nth-child(4) { transform: rotateY(90deg) translateZ(380px); }
+.carousel-face:nth-child(5) { transform: rotateY(120deg) translateZ(380px); }
+.carousel-face:nth-child(6) { transform: rotateY(150deg) translateZ(380px); }
+.carousel-face:nth-child(7) { transform: rotateY(180deg) translateZ(380px); }
+.carousel-face:nth-child(8) { transform: rotateY(210deg) translateZ(380px); }
+.carousel-face:nth-child(9) { transform: rotateY(240deg) translateZ(380px); }
+.carousel-face:nth-child(10) { transform: rotateY(270deg) translateZ(380px); }
+.carousel-face:nth-child(11) { transform: rotateY(300deg) translateZ(380px); }
+.carousel-face:nth-child(12) { transform: rotateY(330deg) translateZ(380px); }
+
+@keyframes rotate {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(-360deg); }
+}
+
+/* =========================================
+   6. SERVICES SECTION
+   ========================================= */
+.services {
+    background: #fff;
+    padding: 6rem 5%;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    font-weight: 700;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: #fff;
+    padding: 3rem 2rem;
+    border-radius: 24px;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+    text-align: center;
+}
+
+.card-glow {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 5px;
+    background: var(--accent-gradient);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(255, 47, 164, 0.3);
+}
+
+.service-card:hover .card-glow {
+    opacity: 1;
+}
+
+.service-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.service-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    color: var(--secondary-text);
+}
+
+/* =========================================
+   7. ABOUT SECTION
+   ========================================= */
+.about {
+    background: var(--bg-color);
+    padding: 6rem 5%;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    color: var(--secondary-text);
+    margin-bottom: 1.5rem;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+.stat-num {
+    display: block;
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--accent-color);
+}
+
+.stat-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-text);
+}
+
+/* =========================================
+   8. CONTACT SECTION
+   ========================================= */
+.contact {
+    padding: 6rem 5%;
+    background: #fff;
+    text-align: center;
+}
+
+.contact-wrapper {
+    background: var(--primary-text);
+    color: #fff;
+    padding: 4rem 2rem;
+    border-radius: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-wrapper .section-title {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.contact-wrapper p {
+    opacity: 0.8;
+    font-size: 1.2rem;
+}
+
+/* Background gradient effect on contact card */
+.contact-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 47, 164, 0.3) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.contact-methods {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.contact-btn {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(5px);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    border: 1px solid rgba(255,255,255,0.2);
+    font-size: 1.2rem;
+    transition: var(--transition);
+    color: #fff;
+}
+
+.contact-btn:hover {
+    background: #fff;
+    color: var(--primary-text);
+}
+
+/* =========================================
+   9. FOOTER
+   ========================================= */
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+    background: var(--bg-color);
+}
+
+/* =========================================
+   10. MODAL (POPUP)
+   ========================================= */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+}
+
+.modal-content {
+    max-width: 90vh;
+    max-height: 90vh;
+}
+
+.modal-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #fff;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.close-modal:hover {
+    color: var(--accent-color);
+}
+
+/* =========================================
+   11. RESPONSIVE (MOBILE)
+   ========================================= */
+
+/* Tablet & Smaller Desktop */
+@media (max-width: 1024px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        gap: 0;
+        padding-top: 2rem;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 4rem;
+        padding: 0 1rem;
+        margin-left: -200px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        margin: 0 auto 2.5rem auto;
+    }
+
+    .btn-group {
+        justify-content: center;
+    }
+
+    /* Adjust Carousel for Tablet */
+    .carousel-scene {
+        margin-right: 0;
+        transform: scale(0.85); 
+        margin-bottom: 2rem;
+    }
+
+    nav {
+        display: none; /* Hide menu for simplicity in this version */
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 7rem;
+        padding-bottom: 2rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .carousel-scene {
+        transform: scale(0.65); /* Smaller for phones */
+        margin-top: -30px;
+    }
+    
+    .stats {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .contact-wrapper {
+        padding: 3rem 1.5rem;
+    }
+    
+    .contact-methods {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    header {
+        justify-content: center;
+    }
+    
+    .logo {
+        font-size: 1.2rem;
+    }
+}
