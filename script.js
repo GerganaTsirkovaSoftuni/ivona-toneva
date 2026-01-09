@@ -1,6 +1,59 @@
 // Register ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
+/* =========================================
+   MOBILE BURGER MENU
+   ========================================= */
+const burgerMenu = document.getElementById('burgerMenu');
+const navMobile = document.getElementById('navMobile');
+const navLinks = document.querySelectorAll('.nav-mobile .nav-link');
+
+// Toggle burger menu
+burgerMenu.addEventListener('click', () => {
+    burgerMenu.classList.toggle('active');
+    navMobile.classList.toggle('active');
+    
+    // Prevent body scroll when menu is open
+    if (navMobile.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = 'auto';
+    }
+});
+
+// Close menu when clicking on a link
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        burgerMenu.classList.remove('active');
+        navMobile.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    });
+});
+
+// Close menu when pressing Escape
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navMobile.classList.contains('active')) {
+        burgerMenu.classList.remove('active');
+        navMobile.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (navMobile.classList.contains('active') && 
+        !navMobile.contains(e.target) && 
+        !burgerMenu.contains(e.target)) {
+        burgerMenu.classList.remove('active');
+        navMobile.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+});
+
+/* =========================================
+   ANIMATIONS
+   ========================================= */
+
 // Hero Animation (Зареждане на началния екран)
 const tl = gsap.timeline();
 
