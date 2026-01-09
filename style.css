@@ -585,10 +585,17 @@ header {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.8rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1027,6 +1034,7 @@ header {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    box-shadow: 0 10px 25px rgba(255, 47, 164, 0.2);
 }
 
 .contact-btn .icon-outline {
