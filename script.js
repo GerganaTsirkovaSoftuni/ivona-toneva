@@ -90,19 +90,7 @@ gsap.utils.toArray(".anim-title").forEach(title => {
     });
 });
 
-// Service Cards (Картите с услугите)
-gsap.from(".anim-card", {
-    scrollTrigger: {
-        trigger: ".services-grid",
-        start: "top 80%",
-        toggleActions: "play none none reverse"
-    },
-    y: 60,
-    opacity: 0,
-    duration: 0.8,
-    stagger: 0.15,
-    ease: "power3.out"
-});
+// Service cards animation removed per request
 
 // About Text & Stats (Текстът за мен и статистиката)
 gsap.from(".anim-text", {
