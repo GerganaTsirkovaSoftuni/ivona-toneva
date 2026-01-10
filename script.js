@@ -165,7 +165,6 @@ const portfolioVideos = [
     { tag: 'TikTok - субтитри', video: 'https://media.githubusercontent.com/media/GerganaTsirkovaSoftuni/ivona-toneva/main/assets/videos/video11.mp4', thumb: './assets/images/img16.jpg' },
     { tag: 'Video', video: 'https://media.githubusercontent.com/media/GerganaTsirkovaSoftuni/ivona-toneva/main/assets/videos/video13.MOV', thumb: './assets/images/img4.jpg', landscape: true },
     { tag: 'TikTok - субтитри', video: 'https://media.githubusercontent.com/media/GerganaTsirkovaSoftuni/ivona-toneva/main/assets/videos/Ostavi%20me.mov', thumb: './assets/images/img17.jpg' },
-    { tag: 'Campaign', video: 'https://media.githubusercontent.com/media/GerganaTsirkovaSoftuni/ivona-toneva/main/assets/videos/video13.mov', thumb: './assets/images/img2.jpg' },
     { tag: 'Campaign', video: 'https://media.githubusercontent.com/media/GerganaTsirkovaSoftuni/ivona-toneva/main/assets/videos/video13.mp4', thumb: './assets/images/img19.jpg' },
     { tag: 'TikTok - субтитри', video: 'https://media.githubusercontent.com/media/GerganaTsirkovaSoftuni/ivona-toneva/main/assets/videos/video4.mov', thumb: './assets/images/img1.jpg' },
     { tag: 'Campaign', video: 'https://media.githubusercontent.com/media/GerganaTsirkovaSoftuni/ivona-toneva/main/assets/videos/video5.mov', thumb: './assets/images/img13.jpg' },
@@ -177,10 +176,10 @@ const portfolioVideos = [
     { tag: 'Campaign', video: 'https://media.githubusercontent.com/media/GerganaTsirkovaSoftuni/ivona-toneva/main/assets/videos/video19.mov', thumb: './assets/images/img6.jpg' },
     { tag: 'Campaign', video: 'https://media.githubusercontent.com/media/GerganaTsirkovaSoftuni/ivona-toneva/main/assets/videos/video14.mov', thumb: './assets/images/thumbnail2.jpg' },
     { tag: 'TikTok', video: 'https://media.githubusercontent.com/media/GerganaTsirkovaSoftuni/ivona-toneva/main/assets/videos/video15.mp4', thumb: './assets/images/img24.jpg' },
-    { tag: 'Campaign', video: 'https://media.githubusercontent.com/media/GerganaTsirkovaSoftuni/ivona-toneva/main/assets/videos/video10.mov', thumb: './assets/images/img23.jpg' },
-    { tag: 'Campaign', video: 'https://media.githubusercontent.com/media/GerganaTsirkovaSoftuni/ivona-toneva/main/assets/videos/video17.mov', thumb: './assets/images/img25.jpg' },
+    { tag: 'Campaign', video: 'https://media.githubusercontent.com/media/GerganaTsirkovaSoftuni/ivona-toneva/main/assets/videos/video10.mov', thumb: './assets/images/img2.jpg' },
+    { tag: 'Campaign', video: 'https://media.githubusercontent.com/media/GerganaTsirkovaSoftuni/ivona-toneva/main/assets/videos/video17.MOV', thumb: './assets/images/img25.jpg' },
     { tag: 'Thumbnail', image: './assets/images/thumbnail1.PNG' },
-    { tag: 'Thumbnail', image: './assets/images/img7.jpg' }
+    { tag: 'Thumbnail', image: './assets/images/thumbnail22.jpg' }
 ];
 
 
