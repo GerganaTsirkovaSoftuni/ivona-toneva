@@ -16,18 +16,41 @@
 </head>
 <body>
 
+    <!-- Preloader -->
+    <div id="preloader" aria-hidden="true">
+        <div class="preloader-ring">
+            <span class="preloader-dot"></span>
+        </div>
+        <span class="preloader-text">Зареждане</span>
+    </div>
+
     <div class="glow-bg"></div>
 
     <header>
         <a href="#home" class="logo">Ивона Тонева <span class="dot">.</span></a>
-        <nav class="nav-desktop">
-            <ul>
-                <li><a href="#services">Услуги</a></li>
-                <li><a href="#portfolio">Портфолио</a></li>
-                <li><a href="#about">За мен</a></li>
-                <li><a href="#contact" class="nav-btn">Контакти</a></li>
-            </ul>
-        </nav>
+        
+        <div class="header-right">
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#portfolio">Портфолио</a></li>
+                    <li><a href="#about">За мен</a></li>
+                    <li><a href="#contact" class="nav-btn">Контакти</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Language Switcher -->
+            <div id="languageSwitcher" class="language-switcher">
+                <button class="lang-btn active" data-lang="bg" aria-label="Switch to Bulgarian">
+                    <img src="./assets/icons/earth.svg" alt="BG" class="flag-icon">
+                    <span class="lang-text">BG</span>
+                </button>
+                <button class="lang-btn" data-lang="en" aria-label="Switch to English">
+                    <img src="./assets/icons/earth.svg" alt="EN" class="flag-icon">
+                    <span class="lang-text">EN</span>
+                </button>
+            </div>
+        </div>
         
         <!-- Burger Menu Button -->
         <button class="burger-menu" id="burgerMenu">
@@ -44,6 +67,18 @@
                 <li><a href="#about" class="nav-link">За мен</a></li>
                 <li><a href="#contact" class="nav-link nav-btn-mobile">Контакти</a></li>
             </ul>
+            
+            <!-- Language Switcher for Mobile -->
+            <div id="languageSwitcherMobile" class="language-switcher-mobile">
+                <button class="lang-btn-mobile active" data-lang="bg" aria-label="Switch to Bulgarian">
+                    <img src="./assets/icons/earth.svg" alt="BG" class="flag-icon">
+                    <span class="lang-text">BG</span>
+                </button>
+                <button class="lang-btn-mobile" data-lang="en" aria-label="Switch to English">
+                    <img src="./assets/icons/earth.svg" alt="EN" class="flag-icon">
+                    <span class="lang-text">EN</span>
+                </button>
+            </div>
         </nav>
     </header>
 
@@ -62,40 +97,40 @@
             <div class="carousel-scene">
                 <div class="carousel">
                     <div class="carousel-face">
-                        <video src="https://media.githubusercontent.com/media/GerganaTsirkovaSoftuni/ivona-toneva/main/assets/videos/Ostavi%20me.mov" autoplay muted loop playsinline preload="metadata"></video>
+                        <img data-src="./assets/images/img9.jpg" alt="Portfolio image" />
                     </div>
                     <div class="carousel-face">
-                        <video src="https://media.githubusercontent.com/media/GerganaTsirkovaSoftuni/ivona-toneva/main/assets/videos/video12.mp4" autoplay muted loop playsinline preload="metadata"></video>
+                        <img data-src="./assets/images/img10.jpg" alt="Portfolio image" />
                     </div>
                     <div class="carousel-face">
-                        <video src="https://media.githubusercontent.com/media/GerganaTsirkovaSoftuni/ivona-toneva/main/assets/videos/video12.mov" autoplay muted loop playsinline preload="metadata"></video>
+                        <img data-src="./assets/images/img6.jpg" alt="Portfolio image" />
                     </div>
                     <div class="carousel-face">
-                        <video src="https://media.githubusercontent.com/media/GerganaTsirkovaSoftuni/ivona-toneva/main/assets/videos/video4.mov" autoplay muted loop playsinline preload="metadata"></video>
+                        <img data-src="./assets/images/img1.jpg" alt="Portfolio image" />
                     </div>
                     <div class="carousel-face">
-                        <video src="https://media.githubusercontent.com/media/GerganaTsirkovaSoftuni/ivona-toneva/main/assets/videos/video16.mov" autoplay muted loop playsinline preload="metadata"></video>
+                        <img data-src="./assets/images/img2.jpg" alt="Portfolio image" />
                     </div>
                     <div class="carousel-face">
-                        <video src="https://media.githubusercontent.com/media/GerganaTsirkovaSoftuni/ivona-toneva/main/assets/videos/video1.mov" autoplay muted loop playsinline preload="metadata"></video>
+                        <img data-src="./assets/images/img7.jpg" alt="Portfolio image" />
                     </div>
                     <div class="carousel-face">
-                        <video src="https://media.githubusercontent.com/media/GerganaTsirkovaSoftuni/ivona-toneva/main/assets/videos/video13.mp4" autoplay muted loop playsinline preload="metadata"></video>
+                        <img data-src="./assets/images/thumbnail2.jpg" alt="Portfolio image" />
                     </div>
                     <div class="carousel-face">
-                        <video src="https://media.githubusercontent.com/media/GerganaTsirkovaSoftuni/ivona-toneva/main/assets/videos/video8.mov" autoplay muted loop playsinline preload="metadata"></video>
+                        <img data-src="./assets/images/img12.jpg" alt="Portfolio image" />
                     </div>
                     <div class="carousel-face">
-                        <video src="https://media.githubusercontent.com/media/GerganaTsirkovaSoftuni/ivona-toneva/main/assets/videos/video9.mov" autoplay muted loop playsinline preload="metadata"></video>
+                        <img data-src="./assets/images/img16.jpg" alt="Portfolio image" />
                     </div>
                     <div class="carousel-face">
-                        <video src="https://media.githubusercontent.com/media/GerganaTsirkovaSoftuni/ivona-toneva/main/assets/videos/video11.mov" autoplay muted loop playsinline preload="metadata"></video>
+                        <img data-src="./assets/images/img17.jpg" alt="Portfolio image" />
                     </div>
                     <div class="carousel-face">
-                        <video src="https://media.githubusercontent.com/media/GerganaTsirkovaSoftuni/ivona-toneva/main/assets/videos/video11.mp4" autoplay muted loop playsinline preload="metadata"></video>
+                        <img data-src="./assets/images/img8.jpg" alt="Portfolio image" />
                     </div>
                     <div class="carousel-face">
-                        <video src="https://media.githubusercontent.com/media/GerganaTsirkovaSoftuni/ivona-toneva/main/assets/videos/video12.mp4" autoplay muted loop playsinline preload="metadata"></video>
+                        <img data-src="./assets/images/img19.jpg" alt="Portfolio image" />
                     </div>
                 </div>
             </div>
@@ -181,89 +216,11 @@
     <section id="portfolio" class="portfolio">
         <div class="portfolio-header">
             <span class="badge">Портфолио</span>
-            <h2 class="section-title gradient-text">Portfolio Gallery</h2>
+            <h2 class="section-title gradient-text">Част от моята работа</h2>
             <p class="section-subtitle">Вертикални видеа за TikTok и Reels с енергия и ритъм. Виж селекция от проекти, които спират скролването.</p>
         </div>
 
-        <div class="portfolio-grid">
-            <div class="portfolio-card">
-                <div class="phone-frame">
-                    <div class="media-wrapper">
-                        <video src="https://media.githubusercontent.com/media/GerganaTsirkovaSoftuni/ivona-toneva/main/assets/videos/Ostavi%20me.mov" autoplay muted loop playsinline preload="metadata"></video>
-                    </div>
-                    <div class="portfolio-overlay"><span class="play-icon">▶</span></div>
-                </div>
-                <div class="portfolio-meta">
-                    <span class="pill">TikTok</span>
-                    <span class="duration">0:15</span>
-                </div>
-            </div>
-
-            <div class="portfolio-card">
-                <div class="phone-frame">
-                    <div class="media-wrapper">
-                        <video src="https://media.githubusercontent.com/media/GerganaTsirkovaSoftuni/ivona-toneva/main/assets/videos/video2.mov" autoplay muted loop playsinline preload="metadata"></video>
-                    </div>
-                    <div class="portfolio-overlay"><span class="play-icon">▶</span></div>
-                </div>
-                <div class="portfolio-meta">
-                    <span class="pill">Reels</span>
-                    <span class="duration">0:12</span>
-                </div>
-            </div>
-
-            <div class="portfolio-card">
-                <div class="phone-frame">
-                    <div class="media-wrapper">
-                        <video src="https://media.githubusercontent.com/media/GerganaTsirkovaSoftuni/ivona-toneva/main/assets/videos/video3.mov" autoplay muted loop playsinline preload="metadata"></video>
-                    </div>
-                    <div class="portfolio-overlay"><span class="play-icon">▶</span></div>
-                </div>
-                <div class="portfolio-meta">
-                    <span class="pill">Shorts</span>
-                    <span class="duration">0:18</span>
-                </div>
-            </div>
-
-            <div class="portfolio-card">
-                <div class="phone-frame">
-                    <div class="media-wrapper">
-                        <video src="https://media.githubusercontent.com/media/GerganaTsirkovaSoftuni/ivona-toneva/main/assets/videos/video4.mov" autoplay muted loop playsinline preload="metadata"></video>
-                    </div>
-                    <div class="portfolio-overlay"><span class="play-icon">▶</span></div>
-                </div>
-                <div class="portfolio-meta">
-                    <span class="pill">UGC</span>
-                    <span class="duration">0:20</span>
-                </div>
-            </div>
-
-            <div class="portfolio-card">
-                <div class="phone-frame">
-                    <div class="media-wrapper">
-                        <video src="https://media.githubusercontent.com/media/GerganaTsirkovaSoftuni/ivona-toneva/main/assets/videos/video5.mov" autoplay muted loop playsinline preload="metadata"></video>
-                    </div>
-                    <div class="portfolio-overlay"><span class="play-icon">▶</span></div>
-                </div>
-                <div class="portfolio-meta">
-                    <span class="pill">Campaign</span>
-                    <span class="duration">0:30</span>
-                </div>
-            </div>
-
-            <div class="portfolio-card">
-                <div class="phone-frame">
-                    <div class="media-wrapper">
-                        <video src="https://media.githubusercontent.com/media/GerganaTsirkovaSoftuni/ivona-toneva/main/assets/videos/video11.mp4" autoplay muted loop playsinline preload="metadata"></video>
-                    </div>
-                    <div class="portfolio-overlay"><span class="play-icon">▶</span></div>
-                </div>
-                <div class="portfolio-meta">
-                    <span class="pill">Podcast Clip</span>
-                    <span class="duration">0:25</span>
-                </div>
-            </div>
-        </div>
+        <div class="portfolio-grid" id="portfolioGrid" aria-live="polite"></div>
     </section>
 
     <section id="contact" class="contact">
@@ -307,10 +264,16 @@
     <div id="video-modal" class="modal">
         <span class="close-modal">&times;</span>
         <div class="modal-content">
-            <video id="modal-video" controls></video>
+            <video id="modal-video" controls controlsList="nodownload" autoplay playsinline muted style="width: 100%; height: 100%; object-fit: contain;" crossorigin="anonymous"></video>
+            <div id="modalPreloader" class="modal-preloader" aria-hidden="true">
+                <div class="preloader-ring">
+                    <span class="preloader-dot"></span>
+                </div>
+            </div>
         </div>
     </div>
 
+    <script src="i18n.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
