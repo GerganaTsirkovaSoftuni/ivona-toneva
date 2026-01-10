@@ -178,8 +178,7 @@ const portfolioVideos = [
     { tag: 'TikTok', video: 'https://media.githubusercontent.com/media/GerganaTsirkovaSoftuni/ivona-toneva/main/assets/videos/video15.mp4', thumb: './assets/images/img24.jpg' },
     { tag: 'Campaign', video: 'https://media.githubusercontent.com/media/GerganaTsirkovaSoftuni/ivona-toneva/main/assets/videos/video10.mov', thumb: './assets/images/img2.jpg' },
     { tag: 'Campaign', video: 'https://media.githubusercontent.com/media/GerganaTsirkovaSoftuni/ivona-toneva/main/assets/videos/video17.MOV', thumb: './assets/images/img25.jpg' },
-    { tag: 'Thumbnail', image: './assets/images/thumbnail1.PNG' },
-    { tag: 'Thumbnail', image: './assets/images/thumbnail22.jpg' }
+    { tag: 'Thumbnail', image: './assets/images/thumbnail1.PNG' }
 ];
 
 
